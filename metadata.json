@@ -1,0 +1,11 @@
+{
+  "name": "PH Eco Alert Remix",
+  "description": "ระบบแจ้งเหตุด้านสิ่งแวดล้อม คณะสาธารณสุขศาสตร์ มหาวิทยาลัยขอนแก่น",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

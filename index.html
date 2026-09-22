@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Eco Alert Remix - ระบบแจ้งเหตุด้านสิ่งแวดล้อม คณะสาธารณสุขศาสตร์ มหาวิทยาลัยขอนแก่น</title>
+    <meta name="theme-color" content="#16A085" />
+    <meta name="description" content="ระบบแจ้งเหตุด้านสิ่งแวดล้อม คณะสาธารณสุขศาสตร์ มหาวิทยาลัยขอนแก่น" />
+    <meta property="og:title" content="PH Eco Alert Remix - คณะสาธารณสุขศาสตร์ มหาวิทยาลัยขอนแก่น" />
+    <meta property="og:description" content="ระบบแจ้งเหตุด้านสิ่งแวดล้อม คณะสาธารณสุขศาสตร์ มหาวิทยาลัยขอนแก่น" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=192&h=192&q=80" />
+
+    <!-- Google Fonts: Noto Sans Thai & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  </head>
+  <body class="bg-[#F8FAFC] text-slate-800 antialiased font-['Noto_Sans_Thai','Plus_Jakarta_Sans',sans-serif]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => {
+              console.log('PWA ServiceWorker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.log('PWA ServiceWorker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+
